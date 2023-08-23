@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="link logo.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+
+    <title>My OTT</title>
+    <style>
+        nav {
+            height: 70px;
+            width: 100%;
+            /* background-color: rgb(70, 162, 147);*/
+            background: rgba(219, 217, 217, 0.4);
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            backdrop-filter: blur(5px);
+            z-index: 100;
+        }
+
+        .nav-logo img {
+            height: 65px;
+            width: 90px;
+
+            margin: 10px 0px 7px;
+        }
+
+        nav .nav-items {
+            position: absolute;
+            right: 20px;
+            position: fixed;
+            top: 0;
+
+        }
+
+        .nav-items a {
+            text-decoration: none;
+            font-size: 20px;
+            padding: 15px 5px;
+            color: rgb(37, 29, 29);
+            display: inline;
+        }
+
+        .nav-items:hover {
+            filter: blur(-1.8px);
+        }
+
+        .nav-items a:hover {
+            color: rgba(52, 148, 79, 0.518);
+            filter: blur(0px);
+        }
+
+        .nav-items:hover a {
+            /*color: rgb(74, 52, 52); */
+            filter: blur(1px);
+        }
+
+        .carousel-inner img {
+            height: 450px;
+            width: 80%;
+        }
+
+        .carousel-inner {
+            margin: 10px 0px 0px 140px;
+        }
+
+        .carousel-control-prev-icon {
+            position: relative;
+            left: 100px;
+        }
+
+        .carousel-control-next-icon {
+            position: relative;
+            right: 100px;
+        }
+
+        h2 {
+            color: green;
+            display: inline;
+        }
+
+        h2 {
+            color: rgb(0, 166, 255);
+        }
+
+        .frequent-image {
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .frequent-image img {
+            height: 200px;
+            width: 200px;
+            margin: 5px;
+        }
+
+        .frequent-image img:hover {
+            transform: translateY(-20px);
+            scale: 1.2;
+            transition: all .5s ease-in-out;
+            border-radius: 10px;
+        }
+
+        #carouselExampleAutoplaying {
+            margin-top: 80px;
+        }
+
+        .recent img {
+            height: 180px;
+            width: 200px;
+            margin: 5px;
+        }
+
+        .recent img:hover {
+            transform: translateY(-20px);
+            scale: 1.1;
+            transition: all .5s ease-in-out;
+            border-radius: 10px;
+        }
+
+
+
+
+        .rated {
+            color: violet;
+        }
+
+        .rated img {
+            height: 200px;
+            width: 200px;
+            margin: 5px;
+        }
+
+        .rated img:hover {
+            scale: 1.1;
+            border-radius: 10px;
+        }
+
+        .favorites {
+            color: yellow;
+        }
+
+        .favorites img {
+            height: 200px;
+            width: 200px;
+            margin: 5px;
+        }
+
+        .favorites img:hover {
+            scale: 1.1;
+            border-radius: 10px;
+        }
+
+        .about h3 {
+            color: rgb(12, 230, 45);
+            position: relative;
+            left: 50px;
+        }
+
+        .signin a {
+            position: relative;
+            left: 30%;
+            top: 10%;
+
+
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(67, 99, 131);">
+    <nav>
+        <div class="nav-logo">
+            <img src="link2 logo.jpg" alt="" />
+        </div>
+        <div class="nav-items">
+            <a href="carouselExampleAutoplaying">Home</a>
+            <a href="#Freq">Frequently watched</a>
+            <a href="#release">Recently released</a>
+            <a href="#rate">Top Rated</a>
+            <a href="#favor">Favourites</a>
+            <a href="#abou">about</a>
+            <a href="#sig">signup/signIn</a>
+        </div>
+    </nav>
+    <!-- Home section start -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-slide="corusel"
+        data-bs-interval="3000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="hotstar.01.webp" class="d-block" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="maha.webp" class="d-block" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="dance.webp" class="d-block" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- home end -->
+
+    <!-- frequent section start -->
+
+    <h2>Frequently watched</h2>
+    <div class="frequent-image" id="Freq">
+        <img src="F.1.webp" alt="">
+        <img src="F.2.webp" alt="">
+        <img src="F.3.webp" alt="">
+        <img src="F.4.webp" alt="">
+        <img src="F.5.webp" alt="">
+        <img src="F.6.webp" alt="">
+        <img src="F.7.webp" alt="">
+        <img src="F.8.webp" alt="">
+        <img src="F.9.webp" alt="">
+        <img src="F.10.webp" alt="">
+        <img src="F.11.webp" alt="">
+        <img src="F.12.webp" alt="">
+    </div>
+
+    <div class="recent">
+        <h2>Recent released</h2>
+        <div class="released-image" id="release">
+
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/6451/1566451-h-ce8cd8bba01f"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/3762/1553762-h-382409ca37c2"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/8794/1568794-h-55ee357e973c"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/2365/1542365-h-50d1e4ee36b3"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/1965/1531965-h-94fa6a9e7f52"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/6241/1516241-h-b4fe545f4ab4"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/9473/1489473-h-79c725d0467f"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/5889/1475889-h-f3eff78e7dbc"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/152/1440152-h-86218a5ed409"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/6439/1436439-h-252e913d4db5"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/7706/1487706-h-5409460cf9b2"
+                alt="">
+        </div>
+    </div><br><br><br>
+    <div class="rated">
+        <h2>Top rated</h2>
+        <div class="rated-vid" id="rate">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/7487/1557487-v-7443ca868089"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/2448/1462448-v-f21a9b6d25d3"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/4168/1524168-v-aa781d26b891"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/5158/875158-v"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/7975/1317975-v-946cae85a242"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/6773/1366773-i-18687272b330"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/9298/1369298-t-e0c9c01fca08"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/5215/875215-v"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/9313/1269313-v-f6f4ee0489de"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/5168/875168-v"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/2614/1462614-v-d66f90e8ace8"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/4179/1474179-v-f647995568b6"
+                alt="">
+        </div>
+    </div><br><br><br>
+    <div class="favorites">
+        <h2>favorites</h2>
+        <div class="favorate" id="favor">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/5168/875168-v"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/5335/1375335-t-cb71a571dc93"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/5464/1565464-v-65ca73edbc41"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/2644/1572644-v-5a6ddd1a50cf"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/8641/1538641-v-ef121d8c53b0"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/3373/1543373-v-628b5e8c47f7"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/4962/1474962-t-70fe58de5f1a"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/8347/1408347-i-a954f08eff24"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/7632/1507632-v-c2a3d66f2781"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/3321/1513321-v-9fb4bd18e21d"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/5475/1565475-v-dcdb0891db2d"
+                alt="">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/361/1500361-v-b4b09b222ec6"
+                alt="">
+        </div>
+    </div><br><br>
+    <div class="about">
+        <h2>about</h2><br>
+        <div class="abouts" id="abou">
+            <!-- <img src="download.jpg" alt=""> -->
+            <h3>about us </h3>
+            <h3>contact details</h3>
+            <h3>need help?</h3>
+            <h3>career</h3>
+            <h3>visit health center</h3>
+        </div>
+    </div>
+    <br><br>
+    <div class="signin">
+        <h2>Signin/Signout</h2>
+        <div class="sign" id="sig"><br>
+            <h1>log in</h1><br>
+            <a href=""><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1024px-Instagram_logo_2022.svg.png "
+                    alt="" height="50px" width="50px"></a>
+            <a href=""><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png"
+                    alt="" height="40px" width="45px"></a>
+            <a href=""><img src="https://img.freepik.com/premium-vector/blue-social-media-logo_197792-1759.jpg" alt=""
+                    height="50px" width="45px"></a>
+            <a href=""><img
+                    src="https://img.freepik.com/free-psd/glowing-twitter-logo-realistic-3d-circle_125540-2093.jpg?size=626&ext=jpg"
+                    alt="" height="50px" width="45px"></a>
+        </div>
+    </div><br><br>
+</body>
+
+</html>
